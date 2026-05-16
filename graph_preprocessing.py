@@ -45,7 +45,7 @@ def prepare_graph_data_from_files(data1_path, data2_path, scale=400):
 def prepare_graph_data_demo():
 
     print("=== Running in DEMO mode (synthetic data) ===")
-    H, W, C = 64, 64, 30  # 小尺寸模拟图像
+    H, W, C = 64, 64, 30  
     N_superpixels = 200
 
 
@@ -56,7 +56,7 @@ def prepare_graph_data_demo():
     Q1 = torch.zeros(H * W, N_superpixels)
     for i in range(H * W):
         Q1[i, np.random.randint(0, N_superpixels)] = 1
-    Q2 = Q1.clone()  # 简化演示
+    Q2 = Q1.clone()  
 
 
     A = torch.rand(N_superpixels, N_superpixels)
