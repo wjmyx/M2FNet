@@ -56,7 +56,7 @@ class MSDP(nn.Module):
         return out
 
 
-# ---------- GCN Branch (two layers + gated residual) ----------
+# ---------- GCN Branch ----------
 class GCNBranch(nn.Module):
     def __init__(self, in_channels, hidden_channels):
         super().__init__()
